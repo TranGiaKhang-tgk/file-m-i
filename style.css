@@ -1,0 +1,312 @@
+/*== Phần giới thiệu Homestay (index.php) ==*/
+.intro {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    background: #e9e6e6;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.intro h2 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.intro p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/*== Reset cơ bản ==*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #73abe3;
+    color: #353535;
+    line-height: 1.6;
+}
+
+/*== Header ==*/
+header {
+    background: linear-gradient(135deg, #033b96, #01363f);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1, 
+header h2 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/*== Container chung ==*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+/*== Danh sách phòng ==*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.room {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #1e293b;
+}
+
+.info p { 
+    margin: 6px 0; 
+}
+
+.price { 
+    color: #30010b; 
+    font-weight: bold; 
+}
+
+.address {
+    font-style: italic;
+    color: #444;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.address::before {
+    content: "📍 ";
+    margin-right: 4px;
+}
+
+/*== Chi tiết phòng ==*/
+.detail-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fce5e5;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.detail-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.detail-container h1 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+.detail-container .price {
+    font-size: 20px;
+    color: #35010d;
+    font-weight: bold;
+}
+
+/*== Nút bấm ==*/
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #063685, #06b6d4);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.btn.pay {
+    background: #3749ad;
+    color: #fff;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #2563eb, #0891b2);
+}
+
+/*== Form thanh toán ==*/
+.payment-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.payment-container h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #1e293b;
+    text-align: center;
+}
+
+.payment-container label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+.payment-container input,
+.payment-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.payment-container input:focus,
+.payment-container select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59,130,246,0.5);
+}
+
+.payment-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.payment-container button:hover {
+    background: linear-gradient(135deg, #2563eb, #0891b2);
+}
+
+/* == Trang thanh toán thành công ==*/
+.success-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.success-container h1 {
+    color: #16a34a;
+    margin-bottom: 20px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.info-table th {
+    background: #3b82f6;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.info-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+/*== Liên hệ (Contact & Footer) ==*/
+footer {
+    background: linear-gradient(135deg, #01363f, #033b96);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+}
+
+footer h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffda79;
+}
+
+footer p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/*== Liên hệ ngắn trong phần giới thiệu ==*/
+.intro .contact {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #01363f;
+    background: #f7f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.intro .contact a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.intro .contact a:hover {
+    text-decoration: underline;
+    color: #004080;
+}
